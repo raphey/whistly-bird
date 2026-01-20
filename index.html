@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whistle Hero 🎵</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Whistle Hero</h1>
+        <div class="info-panel">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="frequency">Frequency: <span id="frequency">0</span> Hz</div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div class="controls">
+            <button id="startBtn" class="btn">Start Game</button>
+            <button id="restartBtn" class="btn hidden">Restart</button>
+            <button id="settingsBtn" class="btn">⚙️ Settings</button>
+        </div>
+        <div id="settingsPanel" class="settings-panel hidden">
+            <h3>Game Settings</h3>
+            <div class="setting-item">
+                <label>Gap Size: <span id="gapValue">3</span>x bird height</label>
+                <input type="range" id="gapSlider" min="2" max="5" value="3" step="0.5">
+            </div>
+            <div class="setting-item">
+                <label>Pipe Speed: <span id="speedValue">2</span></label>
+                <input type="range" id="speedSlider" min="1" max="4" value="2" step="0.5">
+            </div>
+            <div class="setting-item">
+                <label>Gravity: <span id="gravityValue">0.4</span></label>
+                <input type="range" id="gravitySlider" min="0.2" max="0.8" value="0.4" step="0.1">
+            </div>
+            <button id="closeSettingsBtn" class="btn">Close</button>
+        </div>
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p><strong>Whistle high</strong> to move up</p>
+            <p><strong>Whistle low</strong> to move down</p>
+            <p>Navigate through the gaps!</p>
+        </div>
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
