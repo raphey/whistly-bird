@@ -1,4 +1,4 @@
-// Game engine for Whistle Hero
+// Game engine for Whistly Bird
 class Game {
     constructor(canvas, audioAnalyzer = null) {
         this.canvas = canvas;
